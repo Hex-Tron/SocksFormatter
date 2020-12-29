@@ -8,4 +8,4 @@ this is file
 
 >python3 sockFormatter.py File.txt
 
->socks5 123.45.67.89     0000
+socks5 123.45.67.89     0000
