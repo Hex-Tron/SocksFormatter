@@ -1,11 +1,11 @@
 # Read ip form a file
 
->cat File.txt 
+     >cat File.txt 
 
-this is file
+     this is file
 
-'123.45.67.89:0000' 
+     '123.45.67.89:0000' 
 
->python3 sockFormatter.py File.txt
+     >python3 sockFormatter.py File.txt
 
-socks5 123.45.67.89     0000
+     socks5 123.45.67.89     0000
