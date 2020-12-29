@@ -1,5 +1,5 @@
 # SocksFormatter
-Format Raw socks file 
+>Format Raw socks file 
 
 '123.45.67.89:0000' 
 
