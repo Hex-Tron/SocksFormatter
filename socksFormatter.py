@@ -1,15 +1,20 @@
 #!/usr/bin/python3
-import sys
+import sys,re
 file1=sys.argv[1]
+pattern=r'[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}:[0-9]{1,5}'
+l=[]
+def fuc(line):
+    x=re.search(pattern,line)
+    if x!=None:
+            df=x.group()
+            test=df.split(':')
+            your_format='socks5\t{}\t{}\n'.format(test[0],test[1])
+            l.append(your_format)
 
-def socks(file):
-    with open(file,'r') as rd:
-        line=rd.readlines()
-    l=[]
-    for i in line:
-        x=i.split(':')
-        l.append('socks5\t{}\t{}'.format(x[0],x[1]))
-    with open('new.txt','w') as wr:
-        wr.writelines(l)
-socks(file1)
+with open(file1) as rd:
+    for i in rd:
+        fuc(i)
+        
+with open('new.txt','w') as wr:
+    wr.writelines(l)
 
