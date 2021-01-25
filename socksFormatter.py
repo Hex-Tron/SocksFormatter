@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 import sys,re
 file1=sys.argv[1]
 pattern=r'[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}:[0-9]{1,5}'
@@ -18,3 +19,4 @@ with open(file1) as rd:
 with open('new.txt','w') as wr:
     wr.writelines(l)
 
+#Made by Hex
